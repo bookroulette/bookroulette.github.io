@@ -1,0 +1,31 @@
+.BookAddViewer {
+	position: fixed;
+	top: 0;
+    left: 0;
+	
+	width: 0%;
+	height: 0%;
+	
+	z-index: 1;
+	#background: blue;
+	backdrop-filter: blur(10px);
+}
+
+.BookAddViewer div {
+	width: 500px;
+	background: white;
+	
+	margin: 50px auto;
+	padding: 15px;
+}
+
+.BookAddViewer label {
+	display: inline-block;
+	width: 100px;
+	margin: 5px;
+}
+
+.BookAddViewer input[type="text"] {
+	width: 350px;
+	margin: 5px;
+}

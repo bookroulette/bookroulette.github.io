@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/BookListViewer.css">
+		<link rel="stylesheet" href="css/BookAddViewer.css">
+		
+		<script type="text/javascript" src="BookListViewer.js"></script>
+		<script type="text/javascript" src="BookAddViewer.js"></script>
+		<script>
+			var booklistviewer = new BookListViewer();
+			
+			document.addEventListener('DOMContentLoaded', () => {
+				booklistviewer.LoadBooks();
+			});
+		</script>
+	</head>
+	<body>
+		<!--
+			Background reference:
+				https://wall.alphacoders.com/by_sub_category.php?id=177119&name=Book+Wallpapers
+		-->
+		<img src="images/background.jpg" alt="Background" class="background-image">
+		<div class="BookListViewer"></div>
+		<div class="BookAddViewer"></div>
+	</body>
+</html>

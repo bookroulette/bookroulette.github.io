@@ -1,0 +1,34 @@
+{
+	"items":
+	[
+		{
+			"id": 1,
+			"title": "Babel",
+			"image": "babel.jpg",
+			"author": "Henkie Spenkie",
+			"isbn": "1245"
+		},
+		{
+			"id": 2,
+			"title": "Spin the Dawn",
+			"image": "spin_the_dawn.jpg",
+			"author": "Henkie Spenkie",
+			"isbn": "1245"
+		},
+		{
+			"id": 3,
+			"title": "Ink blood sister scribe",
+			"image": "ink_blood_sister_scribe.jpg",
+			"author": "Henkie Spenkie",
+			"isbn": "1245"
+		},
+		{
+			"id": 4,
+			"title": "Burning growns",
+			"image": "burning_growns.jpg",
+			"author": "Henkie Spenkie",
+			"isbn": "1245"
+		}
+	]
+}
+

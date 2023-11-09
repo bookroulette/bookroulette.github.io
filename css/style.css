@@ -1,0 +1,25 @@
+body {
+    background-color: black; /* Set background color to black */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Set body height to the full viewport height */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* Other styles for your website content */
+}
+
+.background-image {
+    width: 100%; /* Set width to 100% to cover the entire viewport */
+    height: 100vh; /* Maintain aspect ratio */
+    background-attachment: fixed;
+	background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place the image behind other content */
+}
+
