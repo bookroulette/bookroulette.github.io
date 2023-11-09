@@ -18,7 +18,7 @@ class BookListViewer
 	LoadBooks()
 	{
 		// URL of the JSON data
-		const apiUrl = 'http://10.10.10.112/bookroulette/test2/data.json';
+		const apiUrl = 'data.json';
 
 		// Fetch JSON data from the API endpoint
 		fetch(apiUrl).then(
