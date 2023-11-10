@@ -1,6 +1,6 @@
 .BookListViewer {
 	position: absolute;
-	top: 0;
+	top: 40px;
     left: 0;
 	width: 100%;
 }
@@ -26,9 +26,8 @@
 	margin-bottom: 10px;
 }
 
-.BookListViewer .grid .image {
+.BookListViewer .grid img {
 	width: 100%; /* Make the image fill the container */
 	height: auto; /* Maintain aspect ratio */
 	margin-bottom: 0px;
 }
-

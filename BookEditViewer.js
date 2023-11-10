@@ -1,7 +1,9 @@
-class BookAddViewer
+class BookEditViewer
 {
 	constructor(booklistviewer)
 	{
+		this.book = null;
+		
 		this.booklistviewer = booklistviewer;
 	}
 	
@@ -18,10 +20,8 @@ class BookAddViewer
 		this.Close();
 	}
 	
-	eventSubmit = (event) =>
+	eventSubmitEditBook = (event) =>
 	{
-		console.log("Submit!");
-		
 		var book = {};
 		
 		var form = event.target.parentNode;
@@ -32,7 +32,34 @@ class BookAddViewer
 
 			// Check if the child is an input element of type text
 			if (child.tagName === 'INPUT' && child.type === 'text') {
-				book[child.id] = child.value;
+				if(child.id == "id")
+					book[child.id] = parseInt(child.value, 10);
+				else
+					book[child.id] = child.value;
+			}
+		}
+		
+		this.booklistviewer.UpdateBook(book.id, book);
+		
+		this.Close();
+	}
+	
+	eventSubmitAddBook = (event) =>
+	{
+		var book = {};
+		
+		var form = event.target.parentNode;
+		
+		// Iterate through all inputs
+		for (var i = 0; i < form.children.length; i++) {
+			var child = form.children[i];
+
+			// Check if the child is an input element of type text
+			if (child.tagName === 'INPUT' && child.type === 'text') {
+				if(child.id == "id")
+					book[child.id] = parseInt(child.value, 10);
+				else
+					book[child.id] = child.value;
 			}
 		}
 		
@@ -43,7 +70,7 @@ class BookAddViewer
 	
 	Close()
 	{
-		var container = document.querySelector('.BookAddViewer');
+		var container = document.querySelector('.BookEditViewer');
 		
 		// Remove all children from the container
 		while(container.firstChild) {
@@ -54,9 +81,9 @@ class BookAddViewer
 		container.style.height = "0%";
 	}
 	
-	Draw()
+	Draw(book = {}, isNewBook = false)
 	{
-		var container = document.querySelector('.BookAddViewer');
+		var container = document.querySelector('.BookEditViewer');
 		
 		container.addEventListener("click", this.eventClickClose);
 		
@@ -79,19 +106,19 @@ class BookAddViewer
 		
 		var template = `
 			<label>Id:</label>
-			<input type="text" id="id" name="id" value="1337">
+			<input type="text" id="id" name="id" value="` + book.id + `">
 			
 			<label>Title:</label>
-			<input type="text" id="title" name="title" value="lol">
+			<input type="text" id="title" name="title" value="` + book.title + `">
 			
 			<label>Image:</label>
-			<input type="text" id="image" name="image" value="gamespy.png">
+			<input type="text" id="image" name="image" value="` + book.image + `">
 			
 			<label>Author:</label>
-			<input type="text" id="author" name="author" value="WTF">
+			<input type="text" id="author" name="author" value="` + book.author + `">
 			
 			<label>ISBN:</label>
-			<input type="text" id="isbn" name="isbn" value="1234">
+			<input type="text" id="isbn" name="isbn" value="` + book.isbn + `">
 		`;
 		inputBook.innerHTML = template;
 		
@@ -99,7 +126,12 @@ class BookAddViewer
 		const input_submit = document.createElement('input');
 		input_submit.type = "submit";
 		input_submit.value = "Submit";
-		input_submit.addEventListener("click", this.eventSubmit);
+		
+		if(isNewBook)
+			input_submit.addEventListener("click", this.eventSubmitAddBook);
+		else
+			input_submit.addEventListener("click", this.eventSubmitEditBook);
+		
 		inputBook.appendChild(input_submit);
 		
 		container.appendChild(inputBook);

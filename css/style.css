@@ -23,3 +23,31 @@ body {
     z-index: -1; /* Place the image behind other content */
 }
 
+.Menu {
+	position: absolute;
+	top: 0;
+    left: 0;
+	width: 100%;
+	background-color: black;
+	color: white;
+}
+
+.MenuConainer {
+	width: 300px;
+	margin: auto;
+}
+
+.MenuConainer div {
+	float: left;
+	width: 100px;
+	padding: 10px;
+}
+
+.MenuConainer label,
+.MenuConainer span {
+	float: left;
+}
+
+.MenuConainer label {
+	margin: 5px;
+}

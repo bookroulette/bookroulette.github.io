@@ -4,7 +4,7 @@ class BookListViewer
 	{
 		this.books = [];
 		
-		this.bookaddviewer = new BookAddViewer(this);
+		this.bookeditviewer = new BookEditViewer(this);
 		
 		// Settings
 		this.book_width = 300;
@@ -86,16 +86,67 @@ class BookListViewer
 	}
 	
 	// Events
-	eventAddBook = () => {
-		console.log("Add button clicked!");
+	eventOpenEditViewer = (event) =>
+	{
+		var divBook = event.target.parentNode;
+		var id = parseInt(divBook.className, 10);
 		
-		this.bookaddviewer.Draw();
+		var book = this.GetBook(id);
+		
+		this.bookeditviewer.Draw(book);
+	}
+	
+	eventOpenEditViewerAddNew = () =>
+	{
+		var book = {
+			id: this.GetNewBookId(),
+			title: "",
+			image: "images/unknown.png",
+			author: "",
+			isbn: ""
+		};
+		this.bookeditviewer.Draw(book, true);
+	}
+	
+	eventDeleteBook = (event) =>
+	{
+		var divBook = event.target.parentNode;
+		var id = parseInt(divBook.className, 10);
+		
+		this.RemoveBook(id);
+	}
+	
+	eventErrorImage = (event) =>
+	{
+		event.target.src = "images/unknown.png";
 	}
 	
 	AddBook(book)
 	{
 		this.books.push(book);
 		this.Draw();
+	}
+	
+	UpdateBook(id, updatedBook)
+	{
+		this.books = this.books.map(book => (book.id === id ? updatedBook : book));
+		this.Draw();
+	}
+	
+	RemoveBook(id)
+	{
+		this.books = this.books.filter(book => book.id !== id);
+		this.Draw();
+	}
+	
+	GetBook(id)
+	{
+		return this.books.find(book => book.id === id);
+	}
+	
+	GetNewBookId()
+	{
+		return this.books.reduce((maxBook, currentBook) => (currentBook.id > maxBook.id ? currentBook : maxBook), { id: -1 }).id + 1;
 	}
 	
 	Draw()
@@ -111,14 +162,35 @@ class BookListViewer
 		grid.className = "grid";
 		
 		this.books.forEach(book => {
-			const newBook = document.createElement('div');
-			newBook.innerHTML += "<img src=\"images/" + book.image + "\" alt=\"Item Image\" class=\"image\">";
-			grid.appendChild(newBook);
+			const divBook = document.createElement('div');
+			divBook.className = book.id;
+			
+			const imgBook = document.createElement('img');
+			imgBook.src = book.image;
+			imgBook.addEventListener("error", this.eventErrorImage);
+			divBook.appendChild(imgBook);
+			
+			// Edit
+			const editBook = document.createElement('span');
+			editBook.className = "material-symbols-outlined";
+			editBook.textContent = "edit";
+			editBook.addEventListener("click", this.eventOpenEditViewer);
+			divBook.appendChild(editBook);
+			
+			// Delete
+			const deleteBook = document.createElement('span');
+			deleteBook.className = "material-symbols-outlined";
+			deleteBook.textContent = "delete";
+			deleteBook.style.color = "red";
+			deleteBook.addEventListener("click", this.eventDeleteBook);
+			divBook.appendChild(deleteBook);
+			
+			grid.appendChild(divBook);
 		});
 		
 		const addBook = document.createElement('div');
 		addBook.innerHTML += "<img src=\"images/add.png\" alt=\"Item Image\" class=\"image\">";
-		addBook.addEventListener("click", this.eventAddBook);
+		addBook.addEventListener("click", this.eventOpenEditViewerAddNew);
 		grid.appendChild(addBook);
 		
 		container.appendChild(grid);

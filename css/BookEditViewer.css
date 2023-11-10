@@ -1,4 +1,4 @@
-.BookAddViewer {
+.BookEditViewer {
 	position: fixed;
 	top: 0;
     left: 0;
@@ -11,7 +11,7 @@
 	backdrop-filter: blur(10px);
 }
 
-.BookAddViewer div {
+.BookEditViewer div {
 	width: 500px;
 	background: white;
 	
@@ -19,13 +19,13 @@
 	padding: 15px;
 }
 
-.BookAddViewer label {
+.BookEditViewer label {
 	display: inline-block;
 	width: 100px;
 	margin: 5px;
 }
 
-.BookAddViewer input[type="text"] {
+.BookEditViewer input[type="text"] {
 	width: 350px;
 	margin: 5px;
 }

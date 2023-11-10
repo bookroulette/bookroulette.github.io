@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+		
+		<!-- Project files -->
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/BookListViewer.css">
-		<link rel="stylesheet" href="css/BookAddViewer.css">
-		
+		<link rel="stylesheet" href="css/BookEditViewer.css">
 		<script type="text/javascript" src="BookListViewer.js"></script>
-		<script type="text/javascript" src="BookAddViewer.js"></script>
+		<script type="text/javascript" src="BookEditViewer.js"></script>
+		
 		<script>
 			var booklistviewer = new BookListViewer();
 			
 			document.addEventListener('DOMContentLoaded', () => {
 				booklistviewer.LoadBooks();
 			});
+
+			function Export()
+			{
+				navigator.clipboard.writeText("My Test");
+			}
 		</script>
 	</head>
 	<body>
@@ -21,7 +29,22 @@
 				https://wall.alphacoders.com/by_sub_category.php?id=177119&name=Book+Wallpapers
 		-->
 		<img src="images/background.jpg" alt="Background" class="background-image">
+		
+		<div class="Menu">
+			<div class="MenuConainer">
+				<div>
+					<label>Import</label>
+					<span class="material-symbols-outlined">download</span>
+				</div>
+				
+				<div onclick="Export()">
+					<label>Export</label>
+					<span class="material-symbols-outlined">upload</span>
+				</div>
+			</div>
+		</div>
+		
 		<div class="BookListViewer"></div>
-		<div class="BookAddViewer"></div>
+		<div class="BookEditViewer"></div>
 	</body>
 </html>
