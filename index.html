@@ -23,7 +23,21 @@
 
 			function Export()
 			{
-				navigator.clipboard.writeText(booklistviewer.encodeBooks());
+				try
+				{
+					// Copy books to clipboard
+					navigator.clipboard.writeText(booklistviewer.encodeBooks());
+					
+					const divNotification = document.createElement('div');
+					divNotification.classList.add('notification');
+					divNotification.textContent = "Data copied to clipboard!";
+					document.body.appendChild(divNotification);
+					
+					// Hide the notification after a delay (e.g., 3 seconds)
+					setTimeout(function() {
+						document.body.removeChild(divNotification);
+					}, 3000);
+				} catch(e) {};
 			}
 		</script>
 	</head>
