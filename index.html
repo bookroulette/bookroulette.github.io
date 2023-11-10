@@ -21,6 +21,14 @@
 				booklistviewer.LoadBooks();
 			});
 
+			function Import()
+			{
+				let jsonString = prompt("Please enter your import data", "");
+				
+				if (jsonString != null || jsonString != "")
+					booklistviewer.decodeBooks(jsonString);
+			}
+			
 			function Export()
 			{
 				try
@@ -50,7 +58,7 @@
 		
 		<div class="Menu">
 			<div class="MenuConainer">
-				<div>
+				<div onclick="Import()">
 					<label>Import</label>
 					<span class="material-symbols-outlined">download</span>
 				</div>

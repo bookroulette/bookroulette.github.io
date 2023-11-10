@@ -68,6 +68,7 @@ class BookListViewer
 			new_books.items.length > 0)
 		{
 			this.books = new_books.items;
+			this.Draw();
 		}
 	}
 	
