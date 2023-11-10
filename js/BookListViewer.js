@@ -15,6 +15,12 @@ class BookListViewer
 		});
 	}
 	
+	SetBookWidth(width)
+	{
+		this.book_width = width;
+		this.Draw();
+	}
+	
 	LoadBooks()
 	{
 		// URL of the JSON data
@@ -165,6 +171,7 @@ class BookListViewer
 		this.books.forEach(book => {
 			const divBook = document.createElement('div');
 			divBook.className = book.id;
+			divBook.style.width = (this.book_width - 25) + "px";
 			
 			const imgBook = document.createElement('img');
 			imgBook.src = book.image;
@@ -190,6 +197,7 @@ class BookListViewer
 		});
 		
 		const addBook = document.createElement('div');
+		addBook.style.width = (this.book_width - 25) + "px";
 		addBook.innerHTML += "<img src=\"images/add.png\" alt=\"Item Image\" class=\"image\">";
 		addBook.addEventListener("click", this.eventOpenEditViewerAddNew);
 		grid.appendChild(addBook);

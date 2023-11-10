@@ -47,6 +47,40 @@
 					}, 3000);
 				} catch(e) {};
 			}
+			
+			function Collapse(event)
+			{
+				booklistviewer.SetBookWidth(100);
+				
+				var target = event.target;
+				if(target.nodeName != "DIV")
+					target = target.parentNode;
+				
+				// Set new click event
+				target.addEventListener("click", Expand);
+				target.removeEventListener("click", Collapse);
+				
+				// Edit content
+				target.children[0].textContent = "Expand";
+				target.children[1].textContent = "expand_content";
+			}
+			
+			function Expand(event)
+			{
+				booklistviewer.SetBookWidth(300);
+				
+				var target = event.target;
+				if(target.nodeName != "DIV")
+					target = target.parentNode;
+				
+				// Set new click event
+				target.removeEventListener("click", Expand);
+				target.addEventListener("click", Collapse);
+				
+				// Edit content
+				target.children[0].textContent = "Collapse";
+				target.children[1].textContent = "collapse_content";
+			}
 		</script>
 	</head>
 	<body>
@@ -66,6 +100,15 @@
 				<div onclick="Export()">
 					<label>Export</label>
 					<span class="material-symbols-outlined">upload</span>
+				</div>
+				
+				<div onclick="Collapse(event)">
+					<label>Collapse</label>
+					<span class="material-symbols-outlined">collapse_content</span>
+					<!--
+					<label>Export</label>
+					<span class="material-symbols-outlined">expand_content</span>
+					-->
 				</div>
 			</div>
 		</div>
