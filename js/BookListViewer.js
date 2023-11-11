@@ -42,7 +42,7 @@ class BookListViewer
 				if (data.items && data.items.length > 0)
 				{
 					this.books = data.items;
-					this.Draw();
+					this.onBooksChange();
 				}
 				else
 				{
@@ -74,6 +74,10 @@ class BookListViewer
 			new_books.items.length > 0)
 		{
 			this.books = new_books.items;
+			this.onBooksChange();
+		}
+		else
+		{
 			this.Draw();
 		}
 	}
@@ -131,18 +135,24 @@ class BookListViewer
 	AddBook(book)
 	{
 		this.books.push(book);
-		this.Draw();
+		this.onBooksChange();
 	}
 	
 	UpdateBook(id, updatedBook)
 	{
 		this.books = this.books.map(book => (book.id === id ? updatedBook : book));
-		this.Draw();
+		this.onBooksChange();
 	}
 	
 	RemoveBook(id)
 	{
 		this.books = this.books.filter(book => book.id !== id);
+		this.onBooksChange();
+	}
+	
+	onBooksChange()
+	{
+		localStorage.setItem('books', this.encodeBooks());
 		this.Draw();
 	}
 	

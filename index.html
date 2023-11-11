@@ -18,7 +18,16 @@
 			var booklistviewer = new BookListViewer();
 			
 			document.addEventListener('DOMContentLoaded', () => {
-				booklistviewer.LoadBooks();
+				const stored_books = localStorage.getItem('books');
+				
+				if (stored_books)
+				{
+					booklistviewer.decodeBooks(stored_books);
+				}
+				else
+				{
+					booklistviewer.LoadBooks();
+				}
 			});
 
 			function Import()
@@ -26,7 +35,10 @@
 				let jsonString = prompt("Please enter your import data", "");
 				
 				if (jsonString != null || jsonString != "")
+				{
 					booklistviewer.decodeBooks(jsonString);
+					booklistviewer.onBookChange();
+				}
 			}
 			
 			function Export()
@@ -106,7 +118,7 @@
 					<label>Collapse</label>
 					<span class="material-symbols-outlined">collapse_content</span>
 					<!--
-					<label>Export</label>
+					<label>Expand</label>
 					<span class="material-symbols-outlined">expand_content</span>
 					-->
 				</div>
