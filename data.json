@@ -1,34 +1,249 @@
 {
-	"items":
-	[
-		{
-			"id": 1,
-			"title": "Babel",
-			"image": "images/babel.jpg",
-			"author": "Henkie Spenkie",
-			"isbn": "1245"
-		},
-		{
-			"id": 2,
-			"title": "Spin the Dawn",
-			"image": "images/spin_the_dawn.jpg",
-			"author": "Henkie Spenkie",
-			"isbn": "1245"
-		},
-		{
-			"id": 3,
-			"title": "Ink blood sister scribe",
-			"image": "images/ink_blood_sister_scribe.jpg",
-			"author": "Henkie Spenkie",
-			"isbn": "1245"
-		},
-		{
-			"id": 4,
-			"title": "Burning growns",
-			"image": "images/burning_growns.jpg",
-			"author": "Henkie Spenkie",
-			"isbn": "1245"
-		}
-	]
+  "items": [
+    {
+      "id": 0,
+      "title": "The starless sea",
+      "image": "https://m.media-amazon.com/images/I/81bu93KjvJL._SY466_.jpg",
+      "author": "Erin Morgenstern",
+      "isbn": "9780385541213"
+    },
+    {
+      "id": 1,
+      "title": "The Fair Botanists",
+      "image": "https://m.media-amazon.com/images/I/91wP0ZF6PVL._SY342_.jpg",
+      "author": "Sara Sheridan",
+      "isbn": "9781529336214"
+    },
+    {
+      "id": 2,
+      "title": "The Betrayals",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1589354851i/46159063.jpg",
+      "author": "Bridget Collins",
+      "isbn": "9780062838131"
+    },
+    {
+      "id": 3,
+      "title": "The Dance Tree",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1645254201i/59660319.jpg",
+      "author": "Kiran Millwood Hargrave",
+      "isbn": "9781529005219"
+    },
+    {
+      "id": 4,
+      "title": "The Night Circus",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387124618i/9361589.jpg",
+      "author": "Erin Morgenstern",
+      "isbn": "9780385534635"
+    },
+    {
+      "id": 5,
+      "title": "The Whispering Muse",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1681811797i/59737212.jpg",
+      "author": "Laura Purcell",
+      "isbn": ""
+    },
+    {
+      "id": 6,
+      "title": "Masters of Death",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1517395110i/38311338.jpg",
+      "author": "Olivie Blake",
+      "isbn": ""
+    },
+    {
+      "id": 7,
+      "title": "Demon in the Wood",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1639666490i/59785164.jpg",
+      "author": "Leigh Bardugo",
+      "isbn": ""
+    },
+    {
+      "id": 8,
+      "title": "A Stroke of the Pen",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1686909830i/122754906.jpg",
+      "author": "Terry Pratchett",
+      "isbn": ""
+    },
+    {
+      "id": 9,
+      "title": "Stone Blind",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1664995844i/61102615.jpg",
+      "author": "Natalie Haynes",
+      "isbn": ""
+    },
+    {
+      "id": 10,
+      "title": "Alone With You in the Ether",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1661863300i/61126612.jpg",
+      "author": "Olivie Blake",
+      "isbn": ""
+    },
+    {
+      "id": 11,
+      "title": "The Witching Tide",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1686761011i/101144882.jpg",
+      "author": "Margaret Meyer",
+      "isbn": ""
+    },
+    {
+      "id": 12,
+      "title": "The Library of Broken Worlds",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1667847849i/63240903.jpg",
+      "author": "Alaya Dawn Johnson",
+      "isbn": ""
+    },
+    {
+      "id": 13,
+      "title": "The Maiden",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1667226481i/63106877.jpg",
+      "author": "Kate Foster",
+      "isbn": ""
+    },
+    {
+      "id": 14,
+      "title": "The Cloisters",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1667414469i/61054804.jpg",
+      "author": "Katy Hays",
+      "isbn": ""
+    },
+    {
+      "id": 15,
+      "title": "Clytemnestra",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1656358463i/61361681.jpg",
+      "author": "Costanza Casati",
+      "isbn": ""
+    },
+    {
+      "id": 16,
+      "title": "The Invisible Life of Addie LaRue",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1584633432i/50623864.jpg",
+      "author": "V.E. Schwab",
+      "isbn": ""
+    },
+    {
+      "id": 17,
+      "title": "Herc",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1685356176i/91274442.jpg",
+      "author": "Phoenicia Rogerson",
+      "isbn": ""
+    },
+    {
+      "id": 18,
+      "title": "Psyche and Eros",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1675646235i/62292422.jpg",
+      "author": "Luna McNamara",
+      "isbn": ""
+    },
+    {
+      "id": 19,
+      "title": "The Mysterious Case of the Alperton Angels",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1663000500i/61157639.jpg",
+      "author": "Janice Hallett",
+      "isbn": ""
+    },
+    {
+      "id": 20,
+      "title": "Atalanta",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1675082381i/61884838.jpg",
+      "author": "Jennifer Saint",
+      "isbn": ""
+    },
+    {
+      "id": 21,
+      "title": "The Kingdom is a Golden Cage",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1680665110i/125050252.jpg",
+      "author": "Lilly Inkwood",
+      "isbn": ""
+    },
+    {
+      "id": 22,
+      "title": "Upon a Frosted Star",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1676045499i/109150703.jpg",
+      "author": "M.A. Kuzniar",
+      "isbn": ""
+    },
+    {
+      "id": 23,
+      "title": "Every Exquisite Thing",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1681505567i/110069098.jpg",
+      "author": "Laura Steven",
+      "isbn": ""
+    },
+    {
+      "id": 24,
+      "title": "A Study in Drowning",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1675782203i/75302266.jpg",
+      "author": "Ava Reid",
+      "isbn": ""
+    },
+    {
+      "id": 25,
+      "title": "Divine Might: Goddesses in Greek Myth",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1696367077i/127823173.jpg",
+      "author": "Natalie Haynes",
+      "isbn": ""
+    },
+    {
+      "id": 26,
+      "title": "The Anatomy of Songs",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1683194113i/148712466.jpg",
+      "author": "Megan White",
+      "isbn": ""
+    },
+    {
+      "id": 27,
+      "title": "Slaying the Shadow Prince",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1684795266i/123636295.jpg",
+      "author": "Helen Scheuerer",
+      "isbn": ""
+    },
+    {
+      "id": 28,
+      "title": "As Long as the Lemon Trees Grow",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1642433141i/57390604.jpg",
+      "author": "Zoulfa Katouh",
+      "isbn": ""
+    },
+    {
+      "id": 29,
+      "title": "Bound by Ravens",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1683189709i/146311339.jpg",
+      "author": "Jesikah Sundin",
+      "isbn": ""
+    },
+    {
+      "id": 30,
+      "title": "The Book of Witches",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1675642648i/63241091.jpg",
+      "author": "Jonathan Strahan",
+      "isbn": ""
+    },
+    {
+      "id": 31,
+      "title": "Last to Leave the Room",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1674440574i/65213922.jpg",
+      "author": "Caitlin Starling",
+      "isbn": ""
+    },
+    {
+      "id": 32,
+      "title": "Bookshops & Bonedust",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1678122626i/65213543.jpg",
+      "author": "Travis Baldree",
+      "isbn": ""
+    },
+    {
+      "id": 33,
+      "title": "Latte Darling",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1672850041i/75572114.jpg",
+      "author": "S.J. Tilly",
+      "isbn": ""
+    },
+    {
+      "id": 34,
+      "title": "Sisters of Sword and Shadow",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1680705637i/124958845.jpg",
+      "author": "Laura Bates",
+      "isbn": ""
+    }
+  ]
 }
-

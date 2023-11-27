@@ -11,11 +11,14 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/BookListViewer.css">
 		<link rel="stylesheet" href="css/BookEditViewer.css">
+		<link rel="stylesheet" href="css/BookViewer.css">
 		<script type="text/javascript" src="js/BookListViewer.js"></script>
 		<script type="text/javascript" src="js/BookEditViewer.js"></script>
+		<script type="text/javascript" src="js/BookViewer.js"></script>
 		
 		<script>
 			var booklistviewer = new BookListViewer();
+			var bookviewer = new BookViewer();
 			
 			document.addEventListener('DOMContentLoaded', () => {
 				const stored_books = localStorage.getItem('books');
@@ -93,6 +96,26 @@
 				target.children[0].textContent = "Collapse";
 				target.children[1].textContent = "collapse_content";
 			}
+			
+			function SetRandomBook(index)
+			{
+				var book = booklistviewer.GetRandomBook();
+				
+				bookviewer.SetBook(book);
+				bookviewer.Draw();
+				
+				if (index < 50)
+				{
+					const delay = 20 + index * 4;
+					
+					setTimeout(() => SetRandomBook(index + 1), delay);
+				}
+			}
+			
+			function RandomBook()
+			{
+				SetRandomBook(0);
+			}
 		</script>
 	</head>
 	<body>
@@ -122,10 +145,15 @@
 					<span class="material-symbols-outlined">expand_content</span>
 					-->
 				</div>
+				<div onclick="RandomBook()">
+					<label>Random</label>
+					<span class="material-symbols-outlined">menu_book</span>
+				</div>
 			</div>
 		</div>
 		
 		<div class="BookListViewer"></div>
 		<div class="BookEditViewer"></div>
+		<div class="BookViewer"></div>
 	</body>
 </html>

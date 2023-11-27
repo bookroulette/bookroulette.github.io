@@ -21,6 +21,13 @@ class BookListViewer
 		this.Draw();
 	}
 	
+	GetRandomBook()
+	{
+		const randomIndex = Math.floor(Math.random() * this.books.length);
+		
+		return this.books[randomIndex];
+	}
+	
 	LoadBooks()
 	{
 		// URL of the JSON data

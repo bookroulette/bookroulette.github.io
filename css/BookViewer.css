@@ -1,0 +1,22 @@
+.BookViewer {
+	position: fixed;
+	top: 0;
+    left: 0;
+	
+	width: 0%;
+	height: 0%;
+	
+	z-index: 1;
+	#background: blue;
+	backdrop-filter: blur(10px);
+}
+
+.BookViewer div {
+	position: relative;
+	width: 450px;
+	margin: 40px auto;
+}
+
+.BookViewer img {
+	width: 100%;
+}
